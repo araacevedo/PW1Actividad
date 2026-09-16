@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.cv {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+
+  width: 80%;
+  min-height: 100vh;
+  margin-inline: auto;
+  border: 0.1rem solid black;
+}
+
+.contenido {
+  padding: 3rem;
+  border-inline: 0.1rem solid black;
+  background-color: #f1f1f1;
+}
+
+.perfil {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-block-end: 3rem;
+}
+
+.datos-personales h1 {
+  margin-block: 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.datos-personales p {
+  margin-block: 0.25rem;
+}
+
+.foto {
+  display: block;
+  flex-shrink: 0;
+  inline-size: 10rem;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+  border: 0.1rem solid black;
+  border-radius: 1.5rem;
+}
+
+.contenido h2 {
+  margin-block: 2rem 0.5rem;
+}
+
+.contenido ul {
+  margin-block-start: 0.5rem;
+}
+
+.contenido a {
+  color: black;
+}
+
+.contenido > section:first-of-type a {
+  text-decoration: none;
+}
+
+.estudios > li > a {
+  text-decoration: underline;
+}
+
+@media (max-width: 40rem) {
+  .cv {
+    grid-template-columns: 0 1fr 0;
+  }
+
+  .contenido {
+    padding: 1rem;
+  }
+
+  .perfil {
+    flex-direction: column;
+  }
+}
+
+.detalle iframe {
+  width: 100%;
+  min-block-size: 20rem;
+  border: 0.1rem solid black;
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+.detalle {
+  width: 80%;
+  min-height: 100vh;
+  margin-inline: auto;
+  padding: 2rem;
+}
+
+.detalle figure {
+  margin-inline: 0;
+}
